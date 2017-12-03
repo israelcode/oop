@@ -31,7 +31,6 @@ void insert_helper(BTreeItem **ptr,const Square& value)
 		if ((*ptr)->getLeft())
 		{
 		BTreeItem* left = (*ptr)->getLeft();
-		//std::cout<<"HERE 2"<<std::endl;	
 		insert_helper(&left,value);
 		}
 		else 
@@ -45,7 +44,6 @@ void insert_helper(BTreeItem **ptr,const Square& value)
 		if((*ptr)->getRight())
 		{
 		BTreeItem* right = (*ptr)->getRight();
-		//std::cout<<"HERE 3"<<std::endl;	
 		insert_helper(&right,value);		
 		}
 		else
@@ -55,7 +53,9 @@ void insert_helper(BTreeItem **ptr,const Square& value)
 		}
 	}
 	else if (value==(*ptr)->getSquare())
-	{std::cout<<"Было"<<std::endl;}
+	{
+		std::cout<<"Было"<<std::endl;
+	}
 }
  
 void Btree::bstInsert(const Square& square)
@@ -63,7 +63,6 @@ void Btree::bstInsert(const Square& square)
 if(m_root==nullptr)
 {m_root= new BTreeItem(square);}
 else {insert_helper(&m_root,square);}
-//insert_helper(&m_root,square);
 }
 
 
@@ -111,7 +110,9 @@ while (tmp != nullptr && !(tmp->getSquare() == square))
 	}
 	
 	if (tmp == nullptr)
-		{return;}
+	{
+		return;
+	}
 	
 
 	
