@@ -28,9 +28,7 @@ int main()
 		switch (action)
 		{
 			case 1:
-			{
-
-				//b.bstInsert(std::make_shared<Square>(std::cin));			
+			{			
 				b.bstInsert(std::cin);
 
 				break;
