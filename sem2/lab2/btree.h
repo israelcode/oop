@@ -9,10 +9,10 @@ public:
 	Btree();
 	virtual ~Btree();
 	
-	void bstInsert(const Square& square);//!
-	void bstRemove(const Square& square);//!
+	void bstInsert(const Square& square);
+	void bstRemove(const Square& square);
 
-	friend std::ostream& operator << (std::ostream& os, const Btree& Btree); //!
+	friend std::ostream& operator << (std::ostream& os, const Btree& Btree); 
 	
 private:
 	BTreeItem* m_root;
